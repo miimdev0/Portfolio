@@ -5,10 +5,10 @@
 
 @font-face {
   font-family: "Rokh";
-  src: url("../font/Rokh.woff2") format("woff2"),
-       url("../font/Rokh.woff") format("woff"),
+  src: url("../font/Rokh-Bold.woff2") format("woff2"),
+       url("../font/Rokh-Bold.woff") format("woff"),
        url("../font/Rokh.otf") format("opentype"),
-       url("../font/Rokh.ttf") format("truetype");
+       url("../font/Rokh-Bold.ttf") format("truetype");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
