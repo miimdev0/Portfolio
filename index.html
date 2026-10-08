@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>محمد صحرانورد — طراح و هنرمند تصویر</title>
+  <meta name="description" content="وب‌سایت شخصی محمد صحرانورد: نمونه‌کارها، گالری و خدمات طراحی." />
+  <meta name="theme-color" content="#0c0c0d" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='40' cy='50' r='30' fill='%23ffb800'/%3E%3Ccircle cx='62' cy='50' r='24' fill='none' stroke='%230c0c0d' stroke-width='6'/%3E%3C/svg%3E" />
+  <link rel="preload" href="font/Rokh.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body class="is-loading">
+
+  <!-- ============ LOADER ============ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-name">محمد صحرانورد</span>
+      <div class="loader-count"><span id="loaderNum">۰</span><small>٪</small></div>
+    </div>
+    <div class="loader-bar"><span id="loaderBar"></span></div>
+  </div>
+
+  <!-- ============ CURSOR ============ -->
+  <div class="cursor" aria-hidden="true">
+    <span class="cursor-dot"></span>
+    <span class="cursor-ring"><span class="cursor-label" id="cursorLabel">مشاهده</span></span>
+  </div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#top" class="logo" aria-label="صفحه اصلی">
+      <span class="logo-o"></span><span class="logo-o o2"></span>
+    </a>
+    <nav class="nav-links" aria-label="ناوبری اصلی">
+      <a href="#work">نمونه‌کارها</a>
+      <a href="#list">پروژه‌ها</a>
+      <a href="#gallery">گالری</a>
+      <a href="#about">درباره</a>
+      <a href="#services">خدمات</a>
+      <a href="#contact">تماس</a>
+    </nav>
+    <div class="nav-right">
+      <span class="clock" id="clock">تهران</span>
+      <a href="#contact" class="pill-btn" data-magnetic>بیایید صحبت کنیم</a>
+      <button class="burger" id="burger" aria-label="باز کردن منو" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#work">نمونه‌کارها</a>
+    <a href="#list">پروژه‌ها</a>
+    <a href="#gallery">گالری</a>
+    <a href="#about">درباره</a>
+    <a href="#services">خدمات</a>
+    <a href="#contact">تماس</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="hero-bg-word" aria-hidden="true">طراحی</div>
+
+      <div class="hero-grid">
+        <div class="hero-text">
+          <p class="hero-kicker reveal-up">طراح، هنرمند و خالق تجربه‌های بصری</p>
+          <h1 class="hero-title">
+            <span class="line"><span class="word-in">محمد</span></span>
+            <span class="line"><span class="word-in outline">صحرانورد</span></span>
+          </h1>
+          <p class="hero-sub reveal-up">
+            ترکیبی از زیبایی‌شناسی، حرکت و روایت؛ برای برندهایی که می‌خواهند دیده شوند و یادشان بماند.
+          </p>
+
+          <div class="hero-pills reveal-up">
+            <a href="#" class="pill" data-magnetic>IG</a>
+            <a href="#" class="pill" data-magnetic>BE</a>
+            <a href="#" class="pill" data-magnetic>DR</a>
+            <a href="#" class="pill" data-magnetic>IN</a>
+          </div>
+
+          <div class="hero-stats reveal-up">
+            <div class="hstat">
+              <b class="count" data-count="250" data-prefix="+">+۲۵۰</b>
+              <span>پروژه‌ی اجراشده</span>
+            </div>
+            <div class="hstat">
+              <b class="count" data-count="800" data-prefix="+">+۸۰۰</b>
+              <span>ساعت طراحی و تولید</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-blob" id="heroBlob" data-tilt-strength="10">
+            <div class="media" data-media>
+              <img id="heroImg" src="img/hero.jpg" alt="محمد صحرانورد" />
+            </div>
+            <span class="script-sign" aria-hidden="true">Mohammad</span>
+            <button class="blob-globe" aria-label="نمایش گالری" data-open-gallery="0">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 3 2.6 15 0 18M12 3c-2.6 3-2.6 15 0 18"/></svg>
+            </button>
+          </div>
+
+          <div class="orbit" aria-hidden="true">
+            <svg viewBox="0 0 200 200">
+              <defs>
+                <path id="orbitPath" d="M100,100 m-86,0 a86,86 0 1,1 172,0 a86,86 0 1,1 -172,0" />
+              </defs>
+              <text><textPath href="#orbitPath">محمد صحرانورد • طراحی • عکاسی • هنر • </textPath></text>
+            </svg>
+            <span class="orbit-core">✦</span>
+          </div>
+
+          <div class="thumbs" role="group" aria-label="تصاویر هیرو">
+            <button class="thumb is-active" data-src="img/hero.jpg" aria-label="تصویر اصلی"><span class="media"><img src="img/hero.jpg" alt="" /></span></button>
+            <button class="thumb" data-src="img/about.jpg" aria-label="تصویر دوم"><span class="media"><img src="img/about.jpg" alt="" /></span></button>
+            <button class="thumb" data-src="img/work-1.jpg" aria-label="تصویر سوم"><span class="media"><img src="img/work-1.jpg" alt="" /></span></button>
+          </div>
+
+          <a class="arrow-down" href="#work" aria-label="اسکرول به نمونه‌کارها">↓</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <span>طراحی هویت</span><b>✦</b><span>کارگردانی هنری</span><b>✦</b><span>عکاسی</span><b>✦</b><span>موشن گرافیک</span><b>✦</b><span>طراحی وب</span><b>✦</b><span>تصویرسازی</span><b>✦</b>
+        </div>
+        <div class="marquee-group">
+          <span>طراحی هویت</span><b>✦</b><span>کارگردانی هنری</span><b>✦</b><span>عکاسی</span><b>✦</b><span>موشن گرافیک</span><b>✦</b><span>طراحی وب</span><b>✦</b><span>تصویرسازی</span><b>✦</b>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ BENTO WORK ============ -->
+    <section class="work" id="work">
+      <div class="sec-head reveal-up">
+        <span class="sec-no">۰۱</span>
+        <h2 class="sec-title">نمونه‌کارهای <span class="hl">منتخب</span></h2>
+      </div>
+
+      <div class="bento">
+        <article class="card about-card" data-tilt>
+          <span class="card-label">درباره من</span>
+          <div class="round-photo media"><img src="img/about.jpg" alt="محمد صحرانورد" /></div>
+          <h3>محمد<br />صحرانورد</h3>
+          <a class="mail-link" href="mailto:hello@example.com">hello@example.com</a>
+          <span class="badge-spin" aria-hidden="true">طراح • هنرمند • </span>
+        </article>
+
+        <article class="card reel" data-tilt>
+          <div class="media reel-media"><img src="img/work-1.jpg" alt="ریل نمایشی" /></div>
+          <button class="play" data-open-gallery="0" aria-label="پخش ریل نمایشی">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+          <span class="reel-cap">ریل نمایشی ۱۴۰۵</span>
+        </article>
+
+        <article class="card stat-card mint reveal-up">
+          <b class="count" data-count="251">۲۵۱</b>
+          <span>پروژه</span>
+        </article>
+
+        <article class="card stat-card violet reveal-up">
+          <b class="count" data-count="156">۱۵۶</b>
+          <span>جایزه</span>
+        </article>
+
+        <article class="card clients dark reveal-up">
+          <span class="clients-mark">◐</span>
+          <span class="clients-label">همکاران و برندها</span>
+        </article>
+
+        <article class="card stat-card yellow reveal-up">
+          <b class="count" data-count="172">۱۷۲</b>
+          <span>جایزه‌ی جهانی طراحی</span>
+        </article>
+
+        <article class="card project" data-tilt>
+          <div class="media"><img src="img/work-2.jpg" alt="برند کافه نوا" /></div>
+          <div class="project-info">
+            <span class="tag">برندینگ</span>
+            <h4>هویت کافه‌ی نوا</h4>
+          </div>
+        </article>
+
+        <article class="card project" data-tilt>
+          <div class="media"><img src="img/work-3.jpg" alt="کمپین بهاری" /></div>
+          <div class="project-info">
+            <span class="tag">کمپین</span>
+            <h4>کمپین بهاری</h4>
+          </div>
+        </article>
+
+        <article class="card project" data-tilt>
+          <div class="media"><img src="img/work-4.jpg" alt="استودیو لومن" /></div>
+          <div class="project-info">
+            <span class="tag">کارگردانی هنری</span>
+            <h4>استودیو لومن</h4>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ PROJECT LIST (hover preview) ============ -->
+    <section class="plist-sec" id="list">
+      <div class="sec-head reveal-up">
+        <span class="sec-no">۰۲</span>
+        <h2 class="sec-title">فهرست <span class="hl">پروژه‌ها</span></h2>
+      </div>
+
+      <ul class="plist">
+        <li class="prow reveal-up" data-img="img/work-1.jpg" data-cursor="مشاهده">
+          <span class="pn">۰۱</span><h3>ریل نمایشی و تیزر برند</h3><span class="pc">موشن</span><span class="py">۱۴۰۵</span>
+        </li>
+        <li class="prow reveal-up" data-img="img/work-2.jpg" data-cursor="مشاهده">
+          <span class="pn">۰۲</span><h3>هویت بصری کافه‌ی نوا</h3><span class="pc">برندینگ</span><span class="py">۱۴۰۴</span>
+        </li>
+        <li class="prow reveal-up" data-img="img/work-3.jpg" data-cursor="مشاهده">
+          <span class="pn">۰۳</span><h3>کمپین بهاری یک فروشگاه</h3><span class="pc">کمپین</span><span class="py">۱۴۰۴</span>
+        </li>
+        <li class="prow reveal-up" data-img="img/work-4.jpg" data-cursor="مشاهده">
+          <span class="pn">۰۴</span><h3>کارگردانی هنری استودیو لومن</h3><span class="pc">کارگردانی</span><span class="py">۱۴۰۳</span>
+        </li>
+        <li class="prow reveal-up" data-img="img/work-5.jpg" data-cursor="مشاهده">
+          <span class="pn">۰۵</span><h3>نمایشگاه عکس شهری</h3><span class="pc">عکاسی</span><span class="py">۱۴۰۳</span>
+        </li>
+        <li class="prow reveal-up" data-img="img/work-6.jpg" data-cursor="مشاهده">
+          <span class="pn">۰۶</span><h3>تصویرسازی کتاب کودک</h3><span class="pc">تصویرسازی</span><span class="py">۱۴۰۲</span>
+        </li>
+      </ul>
+
+      <div class="pfloat" id="pfloat" aria-hidden="true"><img id="pfloatImg" src="img/work-1.jpg" alt="" /></div>
+    </section>
+
+    <!-- ============ HORIZONTAL GALLERY (pinned) ============ -->
+    <section class="hgal" id="gallery">
+      <div class="hgal-sticky">
+        <div class="hgal-head">
+          <h2 class="hgal-title">گالری<span class="hl">.</span></h2>
+          <span class="hgal-count"><b id="hgalCur">۰۱</b> / ۰۶</span>
+        </div>
+        <div class="hgal-track" id="hgalTrack">
+          <figure class="gcard" data-index="0"><div class="media"><img src="img/gallery-1.jpg" alt="گالری ۱" /></div><figcaption><span>۰۱</span> عکاسی تبلیغاتی</figcaption></figure>
+          <figure class="gcard" data-index="1"><div class="media"><img src="img/gallery-2.jpg" alt="گالری ۲" /></div><figcaption><span>۰۲</span> پرتره‌ی کارگردانی‌شده</figcaption></figure>
+          <figure class="gcard" data-index="2"><div class="media"><img src="img/gallery-3.jpg" alt="گالری ۳" /></div><figcaption><span>۰۳</span> تصویرسازی دیجیتال</figcaption></figure>
+          <figure class="gcard" data-index="3"><div class="media"><img src="img/gallery-4.jpg" alt="گالری ۴" /></div><figcaption><span>۰۴</span> فضای داخلی و نور</figcaption></figure>
+          <figure class="gcard" data-index="4"><div class="media"><img src="img/gallery-5.jpg" alt="گالری ۵" /></div><figcaption><span>۰۵</span> کمپین شهری</figcaption></figure>
+          <figure class="gcard" data-index="5"><div class="media"><img src="img/gallery-6.jpg" alt="گالری ۶" /></div><figcaption><span>۰۶</span> ترکیب‌بندی و رنگ</figcaption></figure>
+        </div>
+        <div class="hgal-bar"><span id="hgalBar"></span></div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT (word reveal) ============ -->
+    <section class="about" id="about">
+      <div class="about-inner">
+        <div class="sec-head reveal-up">
+          <span class="sec-no">۰۳</span>
+          <h2 class="sec-title">درباره <span class="hl">من</span></h2>
+        </div>
+        <p class="about-text" id="aboutText">من محمد صحرانورد هستم؛ کسی که باور دارد هر تصویر باید حرکت داشته باشد و هر حرکت باید معنایی داشته باشد. از هویت بصری تا کارگردانی تصویر، کنار شما می‌مانم تا ایده‌ها به تجربه‌ای زنده تبدیل شوند.</p>
+        <div class="about-meta reveal-up">
+          <span>طراحی گرافیک</span><span>عکاسی</span><span>کارگردانی هنری</span><span>موشن</span><span>طراحی وب</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES (stacking cards) ============ -->
+    <section class="services" id="services">
+      <div class="sec-head reveal-up">
+        <span class="sec-no">۰۴</span>
+        <h2 class="sec-title">خدمات <span class="hl">من</span></h2>
+      </div>
+
+      <div class="stack">
+        <article class="svc c1">
+          <span class="svc-no">۰۱</span>
+          <h3>طراحی هویت بصری</h3>
+          <p>لوگو، سیستم رنگ و تایپوگرافی که شخصیت برند شما را حفظ کند و در ذهن بماند.</p>
+          <span class="svc-tags">لوگو • رنگ • تایپ • راهنمای برند</span>
+        </article>
+        <article class="svc c2">
+          <span class="svc-no">۰۲</span>
+          <h3>کارگردانی هنری</h3>
+          <p>ساخت فضای بصری کامل برای کمپین‌ها، از ایده‌ی اولیه تا خروجی نهایی.</p>
+          <span class="svc-tags">کمپین • عکاسی • تصویرسازی</span>
+        </article>
+        <article class="svc c3">
+          <span class="svc-no">۰۳</span>
+          <h3>موشن گرافیک</h3>
+          <p>تیزر، انیمیشن کوتاه و المان‌های متحرک برای شبکه‌های اجتماعی و وب.</p>
+          <span class="svc-tags">تیزر • استوری • لوپ • ریل</span>
+        </article>
+        <article class="svc c4">
+          <span class="svc-no">۰۴</span>
+          <h3>طراحی وب تعاملی</h3>
+          <p>سایت‌هایی سریع، روان و زیبا که تجربه‌ی کاربری را به یک داستان تبدیل می‌کنند.</p>
+          <span class="svc-tags">UI/UX • صفحه‌ی فرود • پرتفولیو</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+      <p class="contact-kicker reveal-up">بیایید با هم شروع کنیم</p>
+      <h2 class="contact-title">
+        <span class="line"><span class="word-in">یک پروژه‌ی</span></span>
+        <span class="line"><span class="word-in outline">ماندگار</span></span>
+        <span class="line"><span class="word-in">بسازیم.</span></span>
+      </h2>
+      <a class="mail-big" href="mailto:hello@example.com" data-magnetic data-cursor="ارسال ایمیل">
+        <span>hello@example.com</span>
+      </a>
+      <div class="contact-row reveal-up">
+        <span>تهران — ایران</span>
+        <span class="dot-sep">•</span>
+        <span>پاسخ‌گویی طی ۲۴ ساعت</span>
+        <span class="dot-sep">•</span>
+        <div class="socials">
+          <a href="#">اینستاگرام</a><a href="#">بِهنس</a><a href="#">دریبل</a><a href="#">لینکدین</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year">۱۴۰۵</span> محمد صحرانورد</span>
+      <span id="todayFa">—</span>
+      <a href="#top" class="to-top" data-magnetic>بازگشت به بالا ↑</a>
+    </footer>
+  </main>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="نمایش تصویر" aria-hidden="true">
+    <button class="lb-close" id="lbClose" aria-label="بستن">×</button>
+    <button class="lb-nav lb-prev" id="lbPrev" aria-label="قبلی">‹</button>
+    <figure class="lb-fig">
+      <div class="lb-img media"><img id="lbImg" src="" alt="" /></div>
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+    <button class="lb-nav lb-next" id="lbNext" aria-label="بعدی">›</button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
