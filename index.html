@@ -4,14 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>محمد صحرانورد — طراح و هنرمند تصویر</title>
-  <meta name="description" content="وب‌سایت شخصی محمد صحرانورد: نمونه‌کارها، گالری و خدمات طراحی." />
+  <meta name="description" content="وب‌سایت شخصی محمد صحرانورد: نمونه‌کارها، گالری سه‌بعدی و خدمات طراحی." />
   <meta name="theme-color" content="#0c0c0d" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='40' cy='50' r='30' fill='%23ffb800'/%3E%3Ccircle cx='62' cy='50' r='24' fill='none' stroke='%230c0c0d' stroke-width='6'/%3E%3C/svg%3E" />
-  <link rel="preload" href="font/Rokh.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="font/Rokh-Bold.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="css/style.css" />
   <script>document.documentElement.classList.add("js");</script>
 </head>
 <body class="is-loading">
+
+  <!-- ============ EFFECTS OVERLAYS ============ -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollBar"></span></div>
 
   <!-- ============ LOADER ============ -->
   <div class="loader" id="loader" aria-hidden="true">
@@ -45,19 +49,36 @@
       <span class="clock" id="clock">تهران</span>
       <a href="#contact" class="pill-btn" data-magnetic>بیایید صحبت کنیم</a>
       <button class="burger" id="burger" aria-label="باز کردن منو" aria-expanded="false" aria-controls="mobileMenu">
-        <span></span><span></span>
+        <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- Mobile menu -->
+  <!-- ============ FULLSCREEN MOBILE MENU ============ -->
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-    <a href="#work">نمونه‌کارها</a>
-    <a href="#list">پروژه‌ها</a>
-    <a href="#gallery">گالری</a>
-    <a href="#about">درباره</a>
-    <a href="#services">خدمات</a>
-    <a href="#contact">تماس</a>
+    <div class="mm-blob b1" aria-hidden="true"></div>
+    <div class="mm-blob b2" aria-hidden="true"></div>
+    <div class="mm-blob b3" aria-hidden="true"></div>
+    <div class="mm-head">
+      <span class="mm-title">منو</span>
+    </div>
+    <nav class="mm-links" aria-label="منوی موبایل">
+      <a href="#work"><i>۰۱</i><span>نمونه‌کارها</span></a>
+      <a href="#list"><i>۰۲</i><span>پروژه‌ها</span></a>
+      <a href="#gallery"><i>۰۳</i><span>گالری</span></a>
+      <a href="#about"><i>۰۴</i><span>درباره</span></a>
+      <a href="#services"><i>۰۵</i><span>خدمات</span></a>
+      <a href="#contact"><i>۰۶</i><span>تماس</span></a>
+    </nav>
+    <div class="mm-foot">
+      <div class="mm-socials">
+        <a href="#">IG</a><a href="#">BE</a><a href="#">DR</a><a href="#">IN</a>
+      </div>
+      <a href="#contact" class="mm-cta">شروع پروژه ↖</a>
+    </div>
+    <div class="mm-orbit" aria-hidden="true">
+      <span class="circle-text" data-circle-text="طراحی • عکاسی • هنر • موشن • طراحی •"></span>
+    </div>
   </div>
 
   <main id="top">
@@ -65,6 +86,9 @@
     <!-- ============ HERO ============ -->
     <section class="hero" id="home">
       <div class="hero-bg-word" aria-hidden="true">طراحی</div>
+      <div class="orb orb-a" aria-hidden="true"></div>
+      <div class="orb orb-b" aria-hidden="true"></div>
+      <div class="orb orb-c" aria-hidden="true"></div>
 
       <div class="hero-grid">
         <div class="hero-text">
@@ -108,12 +132,7 @@
           </div>
 
           <div class="orbit" aria-hidden="true">
-            <svg viewBox="0 0 200 200">
-              <defs>
-                <path id="orbitPath" d="M100,100 m-86,0 a86,86 0 1,1 172,0 a86,86 0 1,1 -172,0" />
-              </defs>
-              <text><textPath href="#orbitPath">محمد صحرانورد • طراحی • عکاسی • هنر • </textPath></text>
-            </svg>
+            <span class="circle-text" data-circle-text="محمد صحرانورد • طراحی • عکاسی • هنر •"></span>
             <span class="orbit-core">✦</span>
           </div>
 
@@ -121,9 +140,8 @@
             <button class="thumb is-active" data-src="img/hero.jpg" aria-label="تصویر اصلی"><span class="media"><img src="img/hero.jpg" alt="" /></span></button>
             <button class="thumb" data-src="img/about.jpg" aria-label="تصویر دوم"><span class="media"><img src="img/about.jpg" alt="" /></span></button>
             <button class="thumb" data-src="img/work-1.jpg" aria-label="تصویر سوم"><span class="media"><img src="img/work-1.jpg" alt="" /></span></button>
+            <button class="thumb-arrow" data-open-gallery="0" aria-label="باز کردن گالری">↗</button>
           </div>
-
-          <a class="arrow-down" href="#work" aria-label="اسکرول به نمونه‌کارها">↓</a>
         </div>
       </div>
     </section>
@@ -144,7 +162,11 @@
     <section class="work" id="work">
       <div class="sec-head reveal-up">
         <span class="sec-no">۰۱</span>
-        <h2 class="sec-title">نمونه‌کارهای <span class="hl">منتخب</span></h2>
+        <h2 class="sec-title">نمونه‌کارهای <span class="hl">منتخب</span><i class="title-ico" aria-hidden="true">✦</i></h2>
+      </div>
+
+      <div class="sec-side-labels" aria-hidden="true">
+        <span>Clients</span><span>Research</span><span>Portfolio</span><span>Podcast</span>
       </div>
 
       <div class="bento">
@@ -241,22 +263,69 @@
       <div class="pfloat" id="pfloat" aria-hidden="true"><img id="pfloatImg" src="img/work-1.jpg" alt="" /></div>
     </section>
 
-    <!-- ============ HORIZONTAL GALLERY (pinned) ============ -->
-    <section class="hgal" id="gallery">
-      <div class="hgal-sticky">
-        <div class="hgal-head">
-          <h2 class="hgal-title">گالری<span class="hl">.</span></h2>
-          <span class="hgal-count"><b id="hgalCur">۰۱</b> / ۰۶</span>
+    <!-- ============ 3D ROTATING RING GALLERY ============ -->
+    <section class="ring3d-sec" id="gallery">
+      <div class="ring3d-bgword" aria-hidden="true">GALLERY</div>
+      <div class="sec-head ring3d-head reveal-up">
+        <span class="sec-no">۰۳</span>
+        <h2 class="sec-title">گالری <span class="hl">سه‌بعدی</span></h2>
+      </div>
+
+      <div class="ring3d-stage" id="ringStage">
+        <div class="ring3d-glow" aria-hidden="true"></div>
+        <div class="ring3d-floor" aria-hidden="true"></div>
+        <div class="ring3d" id="ring3d">
+          <figure class="ring-card" data-index="0" data-cursor="بزرگ‌نمایی">
+            <div class="media"><img src="img/hero.jpg" alt="گالری ۱" /></div>
+            <figcaption><span>۰۱</span> پرتره‌ی استودیو</figcaption>
+          </figure>
+          <figure class="ring-card" data-index="1" data-cursor="بزرگ‌نمایی">
+            <div class="media"><img src="img/work-1.jpg" alt="گالری ۲" /></div>
+            <figcaption><span>۰۲</span> پوستر و گرافیک</figcaption>
+          </figure>
+          <figure class="ring-card" data-index="2" data-cursor="بزرگ‌نمایی">
+            <div class="media"><img src="img/work-2.jpg" alt="گالری ۳" /></div>
+            <figcaption><span>۰۳</span> برندینگ کافه</figcaption>
+          </figure>
+          <figure class="ring-card" data-index="3" data-cursor="بزرگ‌نمایی">
+            <div class="media"><img src="img/work-3.jpg" alt="گالری ۴" /></div>
+            <figcaption><span>۰۴</span> کمپین بهاری</figcaption>
+          </figure>
+          <figure class="ring-card" data-index="4" data-cursor="بزرگ‌نمایی">
+            <div class="media"><img src="img/work-4.jpg" alt="گالری ۵" /></div>
+            <figcaption><span>۰۵</span> نور و فضای داخلی</figcaption>
+          </figure>
+          <figure class="ring-card" data-index="5" data-cursor="بزرگ‌نمایی">
+            <div class="media"><img src="img/work-5.jpg" alt="گالری ۶" /></div>
+            <figcaption><span>۰۶</span> عکاسی شهری</figcaption>
+          </figure>
+          <figure class="ring-card" data-index="6" data-cursor="بزرگ‌نمایی">
+            <div class="media"><img src="img/work-6.jpg" alt="گالری ۷" /></div>
+            <figcaption><span>۰۷</span> تصویرسازی</figcaption>
+          </figure>
+          <figure class="ring-card" data-index="7" data-cursor="بزرگ‌نمایی">
+            <div class="media"><img src="img/about.jpg" alt="گالری ۸" /></div>
+            <figcaption><span>۰۸</span> پشت صحنه‌ی طراحی</figcaption>
+          </figure>
         </div>
-        <div class="hgal-track" id="hgalTrack">
-          <figure class="gcard" data-index="0"><div class="media"><img src="img/gallery-1.jpg" alt="گالری ۱" /></div><figcaption><span>۰۱</span> عکاسی تبلیغاتی</figcaption></figure>
-          <figure class="gcard" data-index="1"><div class="media"><img src="img/gallery-2.jpg" alt="گالری ۲" /></div><figcaption><span>۰۲</span> پرتره‌ی کارگردانی‌شده</figcaption></figure>
-          <figure class="gcard" data-index="2"><div class="media"><img src="img/gallery-3.jpg" alt="گالری ۳" /></div><figcaption><span>۰۳</span> تصویرسازی دیجیتال</figcaption></figure>
-          <figure class="gcard" data-index="3"><div class="media"><img src="img/gallery-4.jpg" alt="گالری ۴" /></div><figcaption><span>۰۴</span> فضای داخلی و نور</figcaption></figure>
-          <figure class="gcard" data-index="4"><div class="media"><img src="img/gallery-5.jpg" alt="گالری ۵" /></div><figcaption><span>۰۵</span> کمپین شهری</figcaption></figure>
-          <figure class="gcard" data-index="5"><div class="media"><img src="img/gallery-6.jpg" alt="گالری ۶" /></div><figcaption><span>۰۶</span> ترکیب‌بندی و رنگ</figcaption></figure>
+
+        <div class="ring3d-hub" aria-hidden="true">
+          <span class="hub-star">✦</span>
+          <span class="hub-text">چرخش</span>
         </div>
-        <div class="hgal-bar"><span id="hgalBar"></span></div>
+
+        <div class="ring3d-ring ring-outer" aria-hidden="true">
+          <span class="circle-text" data-circle-text="محمد صحرانورد • گالری سه‌بعدی • چرخان • هنر • طراحی •"></span>
+        </div>
+      </div>
+
+      <div class="ring3d-ctrl">
+        <button class="ring-btn" id="ringPrev" aria-label="قبلی" data-magnetic>‹</button>
+        <div class="ring3d-hint">
+          <span class="hint-drag">برای چرخاندن بکشید</span>
+          <span class="hint-count"><b id="ringCur">۰۱</b> / ۰۸</span>
+        </div>
+        <button class="ring-btn" id="ringNext" aria-label="بعدی" data-magnetic>›</button>
       </div>
     </section>
 
@@ -264,7 +333,7 @@
     <section class="about" id="about">
       <div class="about-inner">
         <div class="sec-head reveal-up">
-          <span class="sec-no">۰۳</span>
+          <span class="sec-no">۰۴</span>
           <h2 class="sec-title">درباره <span class="hl">من</span></h2>
         </div>
         <p class="about-text" id="aboutText">من محمد صحرانورد هستم؛ کسی که باور دارد هر تصویر باید حرکت داشته باشد و هر حرکت باید معنایی داشته باشد. از هویت بصری تا کارگردانی تصویر، کنار شما می‌مانم تا ایده‌ها به تجربه‌ای زنده تبدیل شوند.</p>
@@ -277,7 +346,7 @@
     <!-- ============ SERVICES (stacking cards) ============ -->
     <section class="services" id="services">
       <div class="sec-head reveal-up">
-        <span class="sec-no">۰۴</span>
+        <span class="sec-no">۰۵</span>
         <h2 class="sec-title">خدمات <span class="hl">من</span></h2>
       </div>
 
